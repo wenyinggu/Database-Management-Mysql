@@ -1,0 +1,38 @@
+---
+title: "R Notebook"
+---
+
+```{r}
+library(dplyr)
+library(readr)
+library(lubridate)
+loan <- read_csv("~/Desktop/dbms_pj2/lending-club-loan-data/loan.csv")
+```
+
+
+```{r}
+# choose columns which we want
+col_index<-c(1:14,16,17,21:27,29,33,36,39:43,46:48,51:54,90:100,113,122,138)
+df<-loan[1:705000,col_index]
+dim(df)
+```
+
+
+```{r}
+# add id and random member_id
+set.seed(1)
+df<-df %>% mutate(id=1:nrow(df),member_id=sample(1:nrow(df),replace = F))
+```
+
+
+```{r}
+write.csv(df,'loan_inf.csv', row.names = FALSE)
+```
+
+
+
+
+
+
+
+
