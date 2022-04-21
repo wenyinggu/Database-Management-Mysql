@@ -1,5 +1,10 @@
-# loan_system
+# Database Management Project with Mysql/HTML loan_system
 
+It is a group project with Can Luo done by May 2020
+
+We create a website as well. Here is the introduction of our website in Youtube 
+
+https://www.youtube.com/watch?v=csRUFxijWuw&t=9s 
 
 This is what you need for creating a loan system for lending club.
 
